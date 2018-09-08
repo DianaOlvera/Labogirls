@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+        <table class="table my-3">
+                <thead>
+                  <tr>
+                    <th scope="col"># venta</th>
+                    <th scope="col">Fecha de operacion</th>
+                    <th scope="col">Motivo de pago </th>
+                    <th scope="col">Celular / correo</th>
+                    <th scope="col">Importe</th>
+                    <th scope="col">Fecha de operacion</th>
+                    <th scope="col">TDD / TDC</th>
+                  </tr>
+                </thead>
+                <tbody id = "tabla">
+                </tbody>
+                </table>
+
+    <form id="myform" method="post">
+     <label>Enviar notificacion a :</label>
+     <input type="text" name="to_email" />
+     <button>Enviar </button>
+    </form>
+
+                    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                    
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+                       (function(){
+                          emailjs.init("user_kx1SDwaVKayktDaHZirXt");
+                       })();
+                    </script>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+<script src="../js/movimientos.js"></script>
+    
+</body>
+</html>
