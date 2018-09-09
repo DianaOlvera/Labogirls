@@ -10,64 +10,64 @@
   var db = firebase.firestore();
 
 
-//   //guardar datos
-// sendComent.addEventListener("click", e => {
-//     //crear variable para cada elemento
-//     //crear variables para cada elemento 
-//     let numVenta= document.getElementById('numVenta').value;
-//     let motivo= document.getElementById('motivo').value;
-//     let celular = document.getElementById('cel').value;
-//     let importe = document.getElementById('importe').value;
-//     let operacion = document.getElementById('op').value
-//     let digitos =  document.getElementById('digitos').value;
-//     let string = "dado por el banco";
-//     //agregar documentos
-//       //agregar documento y id
-//       db.collection(datos).add({
-//         venta: numVenta,
-//         pago: motivo,
-//         celular: string,
-//         importe: importe,
-//         fecha: operacion,
-//         digitos: string,
-//     })
-//     .then(function(docRef) {
-//         console.log("Document written with ID: ", docRef.id);
+  //guardar datos
+sendComent.addEventListener("click", e => {
+    //crear variable para cada elemento
+    //crear variables para cada elemento 
+    let numVenta= document.getElementById('numVenta').value;
+    let motivo= document.getElementById('motivo').value;
+    let celular = document.getElementById('cel').value;
+    let importe = document.getElementById('importe').value;
+    let operacion = document.getElementById('op').value
+    let digitos =  document.getElementById('digitos').value;
+    let string = "dado por el banco";
+    //agregar documentos
+      //agregar documento y id
+      db.collection(datos).add({
+        venta: numVenta,
+        pago: motivo,
+        celular: string,
+        importe: importe,
+        fecha: operacion,
+        digitos: string,
+    })
+    .then(function(docRef) {
+        console.log("Document written with ID: ", docRef.id);
         
-//         document.getElementById('numVenta').value=' ';
-//         document.getElementById('motivo').value=' ';
-//         document.getElementById('string').value=' ';
-//         document.getElementById('importe').value = ' ';
-//         document.getElementById('operacion').value=' ';
-//         document.getElementById('string').value=' ';
+        document.getElementById('numVenta').value=' ';
+        document.getElementById('motivo').value=' ';
+        document.getElementById('string').value=' ';
+        document.getElementById('importe').value = ' ';
+        document.getElementById('operacion').value=' ';
+        document.getElementById('string').value=' ';
 
         
     
-//     })
-//     .catch(function(error) {
-//         console.error("Error adding document: ", error);
-//     });
-//     });
+    })
+    .catch(function(error) {
+        console.error("Error adding document: ", error);
+    });
+    });
 
-//     let tabla = document.getElementById("tabla");
-// //leer documentos
-// db.collection("users").onSnapshot((querySnapshot) => {
-// 	//limpiar la tabla
-//     	tabla.innerHTML = " ";
-//     	querySnapshot.forEach((doc) => {
-//         console.log(`${doc.id} => ${doc.data().numventa}`);
-//         tabla. innerHTML += ` 
-//         <tr>
-//       <th scope="row">${doc.id}</th>
-//       <th scope="col">${doc.data().pago}</th>
-//       <th scope="col">${doc.data().celular}</th>
-//       <th scope="col">${doc.data().fecha}</th>
-//       <th scope="col">${doc.data().importe}</th>
-//       <th scope="col">${doc.data().digitos}</th>
-//       <th scope="col"><button class = "btn btn-danger" onclick = "enviarRecibo('${doc.id}')">Enviar Recibo</button></th>
-//     </tr>`
-//     });
-// });
+    let tabla = document.getElementById("tabla");
+//leer documentos
+db.collection("users").onSnapshot((querySnapshot) => {
+	//limpiar la tabla
+    	tabla.innerHTML = " ";
+    	querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} => ${doc.data().numventa}`);
+        tabla. innerHTML += ` 
+        <tr>
+      <th scope="row">${doc.id}</th>
+      <th scope="col">${doc.data().pago}</th>
+      <th scope="col">${doc.data().celular}</th>
+      <th scope="col">${doc.data().fecha}</th>
+      <th scope="col">${doc.data().importe}</th>
+      <th scope="col">${doc.data().digitos}</th>
+      <th scope="col"><button class = "btn btn-danger" onclick = "enviarRecibo('${doc.id}')">Enviar Recibo</button></th>
+    </tr>`
+    });
+});
 
 
 
